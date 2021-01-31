@@ -1,20 +1,27 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 # Есть словарь координат городов
-
+# Составим словарь словарей расстояний между ними
+# расстояние на координатной сетке - корень из (x1 - x2) ** 2 + (y1 - y2) ** 2
 sites = {
     'Moscow': (550, 370),
     'London': (510, 510),
     'Paris': (480, 480),
 }
+moscow = sites['Moscow']
+london = sites['London']
+paris = sites['Paris']
 
-# Составим словарь словарей расстояний между ними
-# расстояние на координатной сетке - корень из (x1 - x2) ** 2 + (y1 - y2) ** 2
+moscow_london = ((moscow[0] - london[0]) ** 2 + (moscow[1] - london[1]) ** 2) ** .5
+moscow_paris = ((moscow[0] - paris[0]) ** 2 + (moscow[1] - paris[1]) ** 2) ** .5
+london_paris = ((london[0] - paris[0]) ** 2 + (london[1] - paris[1]) ** 2) ** .5
 
-distances = {}
+distances = dict()
+distances['Moscow'] = {}
+distances['Moscow']['London'] = moscow_london
+distances['Moscow']['Paris'] = moscow_paris
 
-# TODO здесь заполнение словаря
+distances['London'] = {}
+distances['London']['Moscow'] = moscow_london
+distances['London']['Paris'] = london_paris
 
 print(distances)
 
