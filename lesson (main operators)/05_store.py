@@ -46,7 +46,19 @@ store = {
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
 
-# TODO здесь ваш код
+furniture = {
+    '12345': 'Лампа',
+    '23456': 'Стол',
+    '34567': 'Диван',
+    '45678': 'Стул',
+}
+for i in goods:
+    total = 0
+    number = 0
+    for j in store[goods[i]]:
+        number += j['quantity']
+        total += j['quantity'] * j['price']
+    print(furniture[goods[i]], '-', number, 'шт', 'стоимость', total, 'руб')
 
 
 

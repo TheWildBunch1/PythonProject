@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # (цикл while)
 
 # Ежемесячная стипендия студента составляет educational_grant руб., а расходы на проживание превышают стипендию
@@ -10,5 +8,11 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
-
-# TODO здесь ваш код
+x = 9
+total_expenses = expenses
+while x > 0:
+    expenses_new = expenses * 1.03
+    total_expenses += expenses_new
+    x -= 1
+total = total_expenses - 10 * educational_grant
+print('Студенту надо попросить', total, 'рублей')

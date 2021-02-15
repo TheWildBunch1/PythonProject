@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # (if/elif/else)
 
 # Заданы размеры envelop_x, envelop_y - размеры конверта и paper_x, paper_y листа бумаги
@@ -20,5 +18,7 @@ paper_x, paper_y = 8, 9
 # paper_x, paper_y = 9, 11
 # (просто раскоментировать нужную строку и проверить свой код)
 
-# TODO здесь ваш код
-
+if (envelop_x > paper_x and envelop_y > paper_y) or (envelop_x > paper_y and envelop_y > paper_x):
+    print('YES')
+else:
+    print('NO')
