@@ -80,9 +80,9 @@ def square_spiral():
 def ten_regular_polygons():
     turtle.shape('turtle')
     n = 3
-    r = 20 # задаем радиус первой окружности
+    r = 20  # задаем радиус первой окружности
 
-    def more_agles(n, m):  # опеределяем функцию, рисующую многоугольник
+    def more_angles(n, m):  # опеределяем функцию, рисующую многоугольник
         q = 360 / n
         while n > 0:
             turtle.left(q)
@@ -93,10 +93,27 @@ def ten_regular_polygons():
         m = 2 * r * math.sin(math.pi / n)  # считаем размер стороны многоугольника (a=2Rsin (360/2n))
         x = (180 - 360 / n) / 2
         turtle.left(x)
-        more_agles(n, m)
+        more_angles(n, m)
         turtle.right(x)
         turtle.penup()
         turtle.forward(10)  # задаем расстояние м/у окружностями
         turtle.pendown()
         n += 1
         r += 10  # раз расстояние м/у окружностями 10, увеличиваем радиус на 10
+
+
+def flower():
+    turtle.shape('turtle')
+    x = 0
+    for _ in range(3):
+        x = 0
+        while x < 8.5:
+            turtle.forward(x)
+            turtle.left(x)
+            x += 0.1
+        x = 0
+        while x < 8.5:
+            turtle.forward(x)
+            turtle.right(x)
+            x += 0.1
+        turtle.right(120)
