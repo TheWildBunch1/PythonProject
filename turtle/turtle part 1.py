@@ -104,16 +104,73 @@ def ten_regular_polygons():
 
 def flower():
     turtle.shape('turtle')
-    x = 0
     for _ in range(3):
-        x = 0
-        while x < 8.5:
-            turtle.forward(x)
-            turtle.left(x)
-            x += 0.1
-        x = 0
-        while x < 8.5:
-            turtle.forward(x)
-            turtle.right(x)
-            x += 0.1
+        turtle.circle(50)
+        turtle.right(180)
+        turtle.circle(50)
         turtle.right(120)
+
+
+def butterfly():
+    turtle.shape('turtle')
+    turtle.right(90)
+    for i in range(1, 11):
+        turtle.circle(50 + 10 * i)
+        turtle.circle(-50 - 10 * i)
+
+
+def spring():
+    turtle.shape('turtle')
+    turtle.left(90)
+    for _ in range(5):
+        turtle.circle(-50, 90)
+        turtle.circle(-50, 90)
+        turtle.circle(-10, 90)
+        turtle.circle(-10, 90)
+
+
+def smile():
+    turtle.shape('turtle')
+    turtle.up()
+    turtle.right(90)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.down()
+    turtle.color('yellow')
+    turtle.begin_fill()
+    turtle.circle(100)
+    turtle.end_fill()
+    turtle.up()
+    turtle.goto(-30, 80)
+    turtle.down()
+    turtle.color('blue')
+    turtle.begin_fill()
+    turtle.circle(15)
+    turtle.end_fill()
+    turtle.up()
+    turtle.forward(60)
+    turtle.down()
+    turtle.begin_fill()
+    turtle.circle(15)
+    turtle.end_fill()
+    turtle.up()
+    turtle.right(90)
+    turtle.goto(0, 60)
+    turtle.down()
+    turtle.color('black')
+    turtle.width(10)
+    turtle.pendown()
+    turtle.forward(20)
+    turtle.penup()
+    turtle.goto(50, 40)
+    turtle.color('red')
+    turtle.pendown()
+    turtle.circle(-50, 90)
+    turtle.circle(-50, 90)
+
+
+def star(n, long):  # функция рисует звезду с n углами, длина отрезков long
+    for i in range(n):
+        turtle.shape('turtle')
+        turtle.forward(long)
+        turtle.right(n // 2 * 360 / n)
