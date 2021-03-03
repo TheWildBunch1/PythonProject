@@ -26,6 +26,6 @@ def test_change_str_on_float():
 
 if __name__ == "__main__":
     test_len_tuple()
-    test_change_tuple
+    test_change_tuple()
     test_float_type()
     test_change_str_on_float()
