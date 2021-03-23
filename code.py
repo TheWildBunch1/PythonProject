@@ -31,3 +31,4 @@ def test_change_str_on_float():
         assert float(a)
     except ValueError:
         pass
+#test
